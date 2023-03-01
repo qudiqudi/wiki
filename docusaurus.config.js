@@ -45,6 +45,18 @@ const config = {
     locales: ['en'],
   },
 
+  plugins: [
+    [
+      "docusaurus-plugin-remote-content",
+      {
+        name: "changelog",
+        sourceBaseUrl: "https://raw.githubusercontent.com/recyclarr/recyclarr/master",
+        outDir: "docs",
+        documents: ["CHANGELOG.md"]
+      }
+    ]
+  ],
+
   presets: [
     [
       'classic',
