@@ -87,6 +87,14 @@ values:
 export RADARR_BASE_URL="http://localhost:7878"
 export RADARR_API_KEY="bf99da49d0b0488ea34e4464aa63a0e5"
 ```
+Or when using docker compose, simply pass your environment variables via the service environment,
+where RADARR_IP and RADARR_API_KEY are defined via a [docker compose .env file:](https://docs.docker.com/compose/environment-variables/set-environment-variables/#compose-file)
+
+```yml
+environment:
+      - RADARR_BASE_URL=http://$RADARR_IP:7878
+      - RADARR_API_KEY=$RADARR_API_KEY
+```
 
 Then, simply replace those properties in your configuration YAML with the environment variables
 syntax:
